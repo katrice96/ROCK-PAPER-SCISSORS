@@ -115,6 +115,7 @@ function playRound(computerChoice, playerSelection) {
     computerChoice = getComputerChoice(choices);
 
     playRound(computerChoice, playerSelection);
+    gameCounter(computerChoice, playerSelection);
     console.log(playRound(computerChoice, playerSelection))
 // logs whether player wins or computer wins via playerCounter or computerCounter
 // ('playerCounter: ' + playerCounter) adds value to string, same with computer counterpart 
