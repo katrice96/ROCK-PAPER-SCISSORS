@@ -84,40 +84,22 @@ function playRound(computerChoice, playerSelection) {
 
  // defines the game function which takes in playround function as a parameter to play a five round game of rock paper scissors 
  
- function game(playRound) {
- // defines computerChoice parameter 
-    computerChoice = getComputerChoice(choices);
-  // this function plays round of rock paper scissors 
-    playRound(computerChoice, playerSelection);
-    // counts who wins, loses or ties in each round( will iterate )
-    gameCounter(computerChoice, playerSelection);
-    // logs output of round
-    console.log(playRound(computerChoice, playerSelection))
+ function game(playRound) { 
 
-    computerChoice = getComputerChoice(choices);
+    for (let round = 1; round <= 5; round++) {
 
-    playRound(computerChoice, playerSelection);
-    gameCounter(computerChoice, playerSelection);
-    console.log(playRound(computerChoice, playerSelection))
+        computerChoice = getComputerChoice(choices);
+        playRound(computerChoice, playerSelection);
+        gameCounter(computerChoice, playerSelection);
+        console.log(playRound(computerChoice, playerSelection))
+        
+        
+    };
 
-    computerChoice = getComputerChoice(choices);
+//test function as is w loop, if working correctly then have playerchoice prompt inside of loop 
+// in theory this should allow for user to be prompted for input each time the loop iterates 
     
-    playRound(computerChoice, playerSelection);
-    gameCounter(computerChoice, playerSelection);
-    console.log(playRound(computerChoice, playerSelection))
 
-    computerChoice = getComputerChoice(choices);
-
-    playRound(computerChoice, playerSelection);
-    gameCounter(computerChoice, playerSelection);
-    console.log(playRound(computerChoice, playerSelection))
-
-    computerChoice = getComputerChoice(choices);
-
-    playRound(computerChoice, playerSelection);
-    gameCounter(computerChoice, playerSelection);
-    console.log(playRound(computerChoice, playerSelection))
-// logs whether player wins or computer wins via playerCounter or computerCounter
 // ('playerCounter: ' + playerCounter) adds value to string, same with computer counterpart 
     console.log('playerCounter: ' + playerCounter);
     console.log('computerCounter: ' + computerCounter);
@@ -145,3 +127,5 @@ function playRound(computerChoice, playerSelection) {
   
     
 console.log(game(playRound))
+
+
