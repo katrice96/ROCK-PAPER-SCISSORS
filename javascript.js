@@ -14,8 +14,8 @@ console.log(computerChoice)
 
 // defines playerSelection variable for future use, .prompt brings up a form for the user to input text when page loads.
 // .toLowerCase at end of prompt statement makes sure all inputs are comparable and case insensitive
-let playerSelection = prompt("this is a game of rock paper scissors, please input your answer").toLowerCase();
-console.log(playerSelection)
+//let playerSelection = prompt("this is a game of rock paper scissors, please input your answer").toLowerCase();
+//console.log(playerSelection)
 // defines playRound function which will take computerChoice and playerSelection as parameters and compare outputs of both to determine a winner 
 function playRound(computerChoice, playerSelection) {
    
@@ -88,6 +88,9 @@ function playRound(computerChoice, playerSelection) {
 
     for (let round = 1; round <= 5; round++) {
 
+        let playerSelection = prompt("this is a game of rock paper scissors, please input your answer").toLowerCase();
+        console.log(playerSelection);
+        
         computerChoice = getComputerChoice(choices);
         playRound(computerChoice, playerSelection);
         gameCounter(computerChoice, playerSelection);
