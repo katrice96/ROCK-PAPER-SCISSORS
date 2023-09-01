@@ -87,8 +87,10 @@ function playRound(computerChoice, playerSelection) {
 
     for (let round = 1; round <= 5; round++) {
 
-        let playerSelection = prompt("this is a game of rock paper scissors, please input your answer").toLowerCase();
-        console.log(playerSelection);
+        //let playerSelection = prompt("this is a game of rock paper scissors, please input your answer").toLowerCase();
+        //console.log(playerSelection);
+        ////////let playerSelection = [rock,paper,scissors]
+
 
         computerChoice = getComputerChoice(choices);
         playRound(computerChoice, playerSelection);
@@ -129,5 +131,39 @@ function playRound(computerChoice, playerSelection) {
   
     
 console.log(game(playRound))
+
+
+ rockButton.addEventListener('click', function() {
+
+    playerSelection = 'Rock';
+    playRound(playerSelection,computerChoice);
+    
+    
+ });
+
+
+
+
+ paperButton.addEventListener('click', function() {
+
+    playerSelection = 'paper'
+    playRound(playerSelection,computerChoice);
+    
+    
+ });
+
+
+
+ scissorsButton.addEventListener('click', function() {
+
+    playerSelection = 'scissors';
+    playRound(playerSelection,computerChoice);
+    
+    
+ });
+
+ 
+
+
 
 
