@@ -13,7 +13,7 @@ function getComputerChoice(strings) {
 
 let choices = ['rock','paper','scissors'];
 let computerChoice = getComputerChoice(choices);
-console.log("Computer Choice: " + computerChoice);
+//console.log("Computer Choice: " + computerChoice);
 
 
 function playRound(computerChoice, playerSelection) {
@@ -76,7 +76,10 @@ rockButton.addEventListener('click', function() {
    playRound(computerChoice,playerSelection);
    gameCounter(computerChoice,playerSelection);
    roundCounter++
+   console.log(playerSelection);
    playNextRound();
+  
+
 });
 
 paperButton.addEventListener('click', function() { 
@@ -84,7 +87,9 @@ paperButton.addEventListener('click', function() {
     playRound(computerChoice,playerSelection);
     gameCounter(computerChoice,playerSelection);
     roundCounter++
+    console.log(playerSelection);
     playNextRound();
+    
 
 });
 
@@ -93,7 +98,9 @@ scissorsButton.addEventListener('click', function() {
     playRound(computerChoice,playerSelection);
     gameCounter(computerChoice,playerSelection);
     roundCounter++
+    console.log(playerSelection);
     playNextRound();
+    
     
 });
 
@@ -114,12 +121,14 @@ function playNextRound() {
             console.log('YOU WIN THE GAME');
         } else {
             console.log('IT\'S A TIE! NO ONE WINS (OR MAYBE YOU BOTH DO)');
-        }
+        } 
+
+        
 
     }
 
 
 }
 
-console.log(playNextRound(playRound))
+//console.log(playNextRound(playRound))
 
