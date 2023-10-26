@@ -13,6 +13,7 @@ function getComputerChoice(strings) {
 
 let choices = ['rock','paper','scissors'];
 let computerChoice = getComputerChoice(choices);
+logToContainer("Computer Choice: " + computerChoice)
 //console.log("Computer Choice: " + computerChoice);
 
 
@@ -69,14 +70,28 @@ function gameCounter(computerChoice, playerSelection) {
         }
     
 }
+    document.addEventListener("DOMContentLoaded", function () {
 
+    const logContainer = document.getElementById('logContainer')
+
+
+});
+
+function logToContainer(message) { 
+    const logEntry = document.createElement('p');
+    logEntry.textContent = message; 
+    logContainer.appendChild(logEntry);
+
+        
+    }
 
 rockButton.addEventListener('click', function() { 
     playerSelection = 'rock';
    playRound(computerChoice,playerSelection);
    gameCounter(computerChoice,playerSelection);
    roundCounter++
-   console.log(playerSelection);
+   //console.log(playerSelection);
+   logToContainer(playerSelection);
    playNextRound();
   
 
@@ -87,7 +102,8 @@ paperButton.addEventListener('click', function() {
     playRound(computerChoice,playerSelection);
     gameCounter(computerChoice,playerSelection);
     roundCounter++
-    console.log(playerSelection);
+    //console.log(playerSelection);
+    logToContainer(playerSelection);
     playNextRound();
     
 
@@ -98,7 +114,8 @@ scissorsButton.addEventListener('click', function() {
     playRound(computerChoice,playerSelection);
     gameCounter(computerChoice,playerSelection);
     roundCounter++
-    console.log(playerSelection);
+    //console.log(playerSelection);
+    logToContainer(playerSelection);
     playNextRound();
     
     
@@ -109,18 +126,18 @@ scissorsButton.addEventListener('click', function() {
 function playNextRound() { 
     if (roundCounter < 5) {
         computerChoice = getComputerChoice(choices);
-        console.log("Computer Choice: " + computerChoice);
+        logToContainer("Computer Choice: " + computerChoice);
 
      }else {
-        console.log('playerCounter: ' + playerCounter);
-        console.log('computerCounter: ' + computerCounter);
+        logToContainer('playerCounter: ' + playerCounter);
+        logToContainer('computerCounter: ' + computerCounter);
 
         if (computerCounter > playerCounter) {
-            console.log('YOU LOSE THE GAME');
+            logToContainer('YOU LOSE THE GAME');
         } else if (computerCounter < playerCounter) {
-            console.log('YOU WIN THE GAME');
+            logToContainer('YOU WIN THE GAME');
         } else {
-            console.log('IT\'S A TIE! NO ONE WINS (OR MAYBE YOU BOTH DO)');
+            logToContainer('IT\'S A TIE! NO ONE WINS (OR MAYBE YOU BOTH DO)');
         } 
 
         
