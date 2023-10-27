@@ -1,5 +1,25 @@
 body {
+    font-family: 'Times New Roman', Times, serif;
     background-color: black;
     color: blanchedalmond;
-    align-content: 50%;
+    text-align: center;
+    font-size:x-large;
 }
+
+.buttonContainer { 
+    
+
+
+}
+
+#rockButton, #paperButton, #scissorsButton {
+     
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    font-size: 100%; 
+    color: blanchedalmond;
+    border-style: none;
+    border-radius: 0%;
+
+}
+
